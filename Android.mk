@@ -6,6 +6,8 @@
 # in the file PATENTS.  All contributing project authors may
 # be found in the AUTHORS file in the root of the source tree.
 
+ifneq ($(TARGET_ARCH_VARIANT),armv6k-vfp)
+
 MY_WEBRTC_ROOT_PATH := $(call my-dir)
 
 
@@ -28,3 +30,4 @@ include $(MY_WEBRTC_ROOT_PATH)/android-webrtc.mk
 
 # build test apps
 include $(MY_WEBRTC_ROOT_PATH)/src/modules/audio_processing/main/test/process_test/Android.mk
+endif
